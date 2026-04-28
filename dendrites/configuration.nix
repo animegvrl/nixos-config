@@ -10,6 +10,7 @@
         ../hardware-configuration.nix
         ./networking.nix
         ./audio.nix
+        ./programs.nix
     ];
 
     boot.kernelPackages = pkgs.linuxPackages_zen;
@@ -97,39 +98,31 @@
     {
         isNormalUser = true;
         extraGroups = [ "wheel" "audio" "networkmanager" ]; # Enable ‘sudo’ for the user.
+
+        packages = with pkgs;
+        [
+            librewolf
+            coppwr
+            zed-editor
+            kdePackages.kdenlive
+            miniserve
+            tor-browser
+
+            mpv
+            vesktop
+            pkgs-master-patched.osu-lazer-bin
+            fuzzel
+            lutris
+
+
+            (btop.override
+            {
+                cudaSupport = true;
+            })
+        ];
     };
 
     virtualisation.waydroid.enable = true;
-
-    programs.hyprland = {
-        enable = true;
-        package = pkgs-master-patched.hyprland;
-    };
-    programs.waybar.enable = true;
-    programs.sway.enable = true;
-    programs.labwc = {
-        enable = true;
-        package = pkgs-master-patched.labwc;
-    };
-    programs.gnupg.agent.enable = true;
-
-    programs.steam =
-    {
-        enable = true;
-        extraCompatPackages =
-        [
-            pkgs.proton-ge-bin
-        ];
-
-        gamescopeSession.enable = true;
-    };
-
-    programs.gamescope =
-    {
-        enable = true;
-
-        # capSysNice = true; # makes gamescope crash in some cases...
-    };
 
     # List packages installed in system profile.
     # You can use https://search.nixos.org/ to find more packages (and options).
