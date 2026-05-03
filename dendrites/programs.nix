@@ -1,5 +1,28 @@
 { pkgs, pkgs-master-patched, ... }:
 {
+    # system
+    programs.ssh.startAgent = true;
+    programs.gnupg.agent.enable = true;
+
+    # compositor
+    programs.hyprland = {
+        enable = true;
+        package = pkgs-master-patched.hyprland;
+    };
+    programs.sway.enable = true;
+    programs.labwc = {
+        enable = true;
+        package = pkgs-master-patched.labwc;
+    };
+    programs.foot.enable = true;
+    programs.waybar.enable = true;
+
+    # programs
+    hardware.opentabletdriver.enable = true;
+    virtualisation.waydroid = {
+        enable = true;
+        package = pkgs.waydroid-nftables;
+    };
     programs.obs-studio =
     {
         enable = true;
@@ -10,24 +33,6 @@
 
         # plugins = [ pkgs.obs-studio-plugins.wlrobs ];
     };
-
-    programs.ssh.startAgent = true;
-
-    programs.foot.enable = true;
-    programs.neovim.enable = true;
-    programs.yazi.enable = true;
-    programs.hyprland = {
-        enable = true;
-        package = pkgs-master-patched.hyprland;
-    };
-    programs.waybar.enable = true;
-    programs.sway.enable = true;
-    programs.labwc = {
-        enable = true;
-        package = pkgs-master-patched.labwc;
-    };
-    programs.gnupg.agent.enable = true;
-
     programs.steam =
     {
         enable = true;
@@ -38,7 +43,6 @@
 
         gamescopeSession.enable = true;
     };
-
     programs.gamescope =
     {
         enable = true;
@@ -46,4 +50,7 @@
         # capSysNice = true; # makes gamescope crash in some cases...
     };
 
+    # cli/tui
+    programs.neovim.enable = true;
+    programs.yazi.enable = true;
 }

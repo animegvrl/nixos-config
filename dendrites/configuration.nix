@@ -38,8 +38,6 @@
 
     fonts.packages = [ pkgs.unifont ];
 
-    hardware.opentabletdriver.enable = true;
-
     ### NVIDIA ###
     hardware.graphics =
     {
@@ -94,9 +92,6 @@
         # };
     # };
 
-
-
-    virtualisation.waydroid.enable = true;
 
     # List packages installed in system profile.
     # You can use https://search.nixos.org/ to find more packages (and options).
