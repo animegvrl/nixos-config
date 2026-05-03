@@ -9,11 +9,6 @@
         enable = true;
         package = pkgs-master-patched.hyprland;
     };
-    programs.sway.enable = true;
-    programs.labwc = {
-        enable = true;
-        package = pkgs-master-patched.labwc;
-    };
     programs.foot.enable = true;
     programs.waybar.enable = true;
 

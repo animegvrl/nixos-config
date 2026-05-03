@@ -73,26 +73,6 @@
     # Select internationalisation properties.
     i18n.defaultLocale = "en_US.UTF-8";
 
-    # xdg.portal =
-    # {
-        # enable = true;
-        # wlr.enable = true;
-
-        # extraPortals =
-        # [
-        #     pkgs.xdg-desktop-portal-gtk
-        #     pkgs.xdg-desktop-portal-gnome
-        #     pkgs.xdg-desktop-portal-wlr
-        # ];
-
-        # config.common = {
-        #     default = "gtk"; # TODO: try to set this up properly
-        #     "org.freedesktop.impl.portal.Screenshot" = "wlr";
-        #     "org.freedesktop.impl.portal.ScreenCast" = "wlr";
-        # };
-    # };
-
-
     # List packages installed in system profile.
     # You can use https://search.nixos.org/ to find more packages (and options).
     environment.systemPackages = with pkgs;
@@ -102,8 +82,6 @@
 
         pavucontrol
 
-        # pkgs-master-patched.xwayland-satellite
-        # xwayland-satellite
         wine-wayland
     ];
 

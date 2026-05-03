@@ -18,10 +18,7 @@
         {
             name = "nixpkgs-master-patched";
             src = nixpkgs-master;
-            patches =
-            [
-                # ./dendrites/patches/labwc-0.9.6.patch
-            ];
+            patches = [];
         };
         pkgs-master-patched = import nixpkgs-master-patched
         {
