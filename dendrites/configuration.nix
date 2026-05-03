@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ nsenv, pkgs, pkgs-master-patched, ... }:
+{ pkgs, pkgs-master-patched, ... }:
 {
     # Include the results of the hardware scan.
     imports =
@@ -11,6 +11,7 @@
         ./networking.nix
         ./audio.nix
         ./programs.nix
+        ./user.nix
     ];
 
     boot.kernelPackages = pkgs.linuxPackages_zen;
@@ -93,37 +94,7 @@
         # };
     # };
 
-    # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users.${nsenv.username} =
-    {
-        isNormalUser = true;
-        extraGroups = [ "wheel" "audio" "networkmanager" ]; # Enable ‘sudo’ for the user.
 
-        packages = with pkgs;
-        [
-            librewolf
-            coppwr
-            zed-editor
-            kdePackages.kdenlive
-            miniserve
-            tor-browser
-
-            lazygit
-
-            mpv
-            vesktop
-            pkgs-master-patched.osu-lazer-bin
-            fuzzel
-            lutris
-            hyprshot
-
-
-            (btop.override
-            {
-                cudaSupport = true;
-            })
-        ];
-    };
 
     virtualisation.waydroid.enable = true;
 
