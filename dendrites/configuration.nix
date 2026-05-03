@@ -108,11 +108,14 @@
             miniserve
             tor-browser
 
+            lazygit
+
             mpv
             vesktop
             pkgs-master-patched.osu-lazer-bin
             fuzzel
             lutris
+            hyprshot
 
 
             (btop.override
