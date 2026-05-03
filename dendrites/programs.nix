@@ -11,6 +11,8 @@
         # plugins = [ pkgs.obs-studio-plugins.wlrobs ];
     };
 
+    programs.ssh.startAgent = true;
+
     programs.foot.enable = true;
     programs.neovim.enable = true;
     programs.yazi.enable = true;
