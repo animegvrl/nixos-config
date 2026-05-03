@@ -141,7 +141,10 @@
         wine-wayland
     ];
 
-    environment.sessionVariables.NIXOS_OZONE_WL = "1";
+    environment.sessionVariables = {
+        NIXOS_OZONE_WL = "1";
+        EDITOR = "nvim";
+    };
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
