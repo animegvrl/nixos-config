@@ -35,4 +35,26 @@
             })
         ];
     };
+
+    programs.dconf.profiles.user.databases =
+    [
+        {
+            lockAll = true;
+            settings = {
+                "org/gnome/desktop/interface" =
+                {
+                    enable-animations = false;
+                    color-scheme = "prefer-dark";
+                };
+                "org/gnome/desktop/a11y/interface" =
+                {
+                    reduced-motion = true;
+                };
+                "org/gnome/desktop/wm/preferences" =
+                {
+                    button-layout = ":";
+                };
+            };
+        }
+    ];
 }
