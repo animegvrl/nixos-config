@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ pkgs, pkgs-master-patched, ... }:
+{ lib, pkgs, pkgs-master-patched, ... }:
 {
     # Include the results of the hardware scan.
     imports =
@@ -21,6 +21,16 @@
     boot.loader.efi.canTouchEfiVariables = true;
 
     boot.supportedFilesystems = [ "ntfs" ];
+
+    nixpkgs.config.allowUnfreePredicate =
+        pkg: builtins.elem (lib.getName pkg)
+        [
+            "nvidia-x11"
+            "nvidia-settings"
+
+            "steam"
+            "steam-unwrapped"
+        ];
 
     nix.settings =
     {
@@ -46,8 +56,6 @@
     };
 
     services.xserver.videoDrivers = ["nvidia"];
-
-    nixpkgs.config.allowUnfree = true; # TODO: predicate
 
     hardware.nvidia =
     {
