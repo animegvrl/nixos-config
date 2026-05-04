@@ -1,5 +1,11 @@
 { pkgs, pkgs-master-patched, ... }:
 {
+    services.displayManager.ly =
+    {
+        enable = true;
+        x11Support = false;
+    };
+
     # system
     programs.ssh.startAgent = true;
     programs.gnupg.agent.enable = true;
@@ -9,6 +15,7 @@
         enable = true;
         package = pkgs-master-patched.hyprland;
     };
+    programs.hyprlock.enable = true;
     programs.foot.enable = true;
     programs.waybar.enable = true;
 
