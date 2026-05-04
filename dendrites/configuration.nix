@@ -46,7 +46,7 @@
     # services.dbus.enable = true;
     security.polkit.enable = true;
 
-    fonts.packages = [ pkgs.unifont ];
+    fonts.packages = with pkgs; [ unifont nerd-fonts.symbols-only ];
 
     ### NVIDIA ###
     hardware.graphics =
