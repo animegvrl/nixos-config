@@ -3,7 +3,7 @@
     users.users.${nsenv.username} =
     {
         isNormalUser = true;
-        extraGroups = [ "wheel" "audio" "networkmanager" ];
+        extraGroups = [ "wheel" "audio" "networkmanager" "gamemode" ];
 
         packages = with pkgs;
         [

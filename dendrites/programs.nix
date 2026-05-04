@@ -48,4 +48,29 @@
     # cli/tui
     programs.neovim.enable = true;
     programs.yazi.enable = true;
+    programs.gamemode =
+    {
+        enable = true;
+
+        settings =
+        {
+            general =
+            {
+                reaper_freq = 12;
+                desiredgov = "performance";
+                igpu_power_threshold = -1;
+                softrealtime = "auto";
+                renice = 20;
+                ioprio = 0;
+                inhibit_screensaver = 1;
+                disable_splitlock = 1;
+            };
+
+            cpu =
+            {
+                pin_cores = "no";
+                park_cores = "no";
+            };
+        };
+    };
 }
