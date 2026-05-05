@@ -22,11 +22,14 @@
             mpv
             vesktop
             lutris
+            dbeaver-bin
+            pkgs-master-patched.mumble
 
             # games
             pkgs-master-patched.osu-lazer-bin
 
             # cli/tui
+            rclone
             lazygit
             miniserve
             (btop.override
