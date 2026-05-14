@@ -11,7 +11,8 @@
     programs.gnupg.agent.enable = true;
 
     # compositor
-    programs.hyprland = {
+    programs.hyprland =
+    {
         enable = true;
         package = pkgs-master-patched.hyprland;
     };
@@ -21,7 +22,8 @@
 
     # programs
     hardware.opentabletdriver.enable = true;
-    virtualisation.waydroid = {
+    virtualisation.waydroid =
+    {
         enable = true;
         package = pkgs.waydroid-nftables;
     };
