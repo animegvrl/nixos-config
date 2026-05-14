@@ -27,6 +27,10 @@
         enable = true;
         package = pkgs.waydroid-nftables;
     };
+    services.lact =
+    {
+        enable = true;
+    };
     programs.obs-studio =
     {
         enable = true;
