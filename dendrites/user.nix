@@ -16,6 +16,7 @@
             fuzzel
 
             # programs
+            audacity
             coppwr
             zed-editor
             kdePackages.kdenlive
