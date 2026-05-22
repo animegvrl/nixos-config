@@ -4,9 +4,9 @@
     inputs =
     {
         # https://github.com/NixOS/nixpkgs/tree/nixos-25.11
-        nixpkgs.url = "github:nixos/nixpkgs/8fd9daa3db09ced9700431c5b7ad0e8ba199b575";
+        nixpkgs.url = "github:nixos/nixpkgs/687f05a9184cad4eaf905c48b63649e3a86f5433";
         # https://github.com/NixOS/nixpkgs (master)
-        nixpkgs-master.url = "github:nixos/nixpkgs/9ec84f9983acabdf3e558f0e7f510cdbb34995b4";
+        nixpkgs-master.url = "github:nixos/nixpkgs/f63696258acefca57e4f8318bf7102d9a08e04db";
     };
 
     outputs = { nixpkgs, nixpkgs-master, ... }:
