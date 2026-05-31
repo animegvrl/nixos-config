@@ -27,6 +27,7 @@
         [
             "nvidia-x11"
             "nvidia-settings"
+            "nvidia-kernel-modules"
 
             "steam"
             "steam-unwrapped"

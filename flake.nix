@@ -3,10 +3,10 @@
 
     inputs =
     {
-        # https://github.com/NixOS/nixpkgs/tree/nixos-25.11
-        nixpkgs.url = "github:nixos/nixpkgs/687f05a9184cad4eaf905c48b63649e3a86f5433";
+        # https://github.com/NixOS/nixpkgs/tree/nixos-26.05
+        nixpkgs.url = "github:nixos/nixpkgs/ec942ba042dad5ef097e2ef3a3effc034241f011";
         # https://github.com/NixOS/nixpkgs (master)
-        nixpkgs-master.url = "github:nixos/nixpkgs/f63696258acefca57e4f8318bf7102d9a08e04db";
+        nixpkgs-master.url = "github:nixos/nixpkgs/6e7c84f42969957c62e1a115b74879ae30afc17c";
     };
 
     outputs = { nixpkgs, nixpkgs-master, ... }:
