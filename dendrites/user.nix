@@ -28,6 +28,7 @@
 
             # games
             pkgs-master-patched.osu-lazer-bin
+            prismlauncher
 
             # cli/tui
             rclone
