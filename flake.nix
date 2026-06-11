@@ -4,9 +4,9 @@
     inputs =
     {
         # https://github.com/NixOS/nixpkgs/tree/nixos-26.05
-        nixpkgs.url = "github:nixos/nixpkgs/ec942ba042dad5ef097e2ef3a3effc034241f011";
+        nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
         # https://github.com/NixOS/nixpkgs (master)
-        nixpkgs-master.url = "github:nixos/nixpkgs/6e7c84f42969957c62e1a115b74879ae30afc17c";
+        nixpkgs-master.url = "github:NixOS/nixpkgs";
     };
 
     outputs = { nixpkgs, nixpkgs-master, ... }:
