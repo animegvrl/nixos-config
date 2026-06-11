@@ -27,7 +27,7 @@
         [
             "nvidia-x11"
             "nvidia-settings"
-            "nvidia-kernel-modules"
+            # "nvidia-kernel-modules"
 
             "steam"
             "steam-unwrapped"
@@ -68,7 +68,7 @@
             finegrained = false;
         };
 
-        open = false;
+        open = true;
 
         nvidiaSettings = true;
 
