@@ -3,28 +3,26 @@
 
     inputs =
     {
-        # https://github.com/NixOS/nixpkgs/tree/nixos-26.05
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-        # https://github.com/NixOS/nixpkgs (master)
-        nixpkgs-master.url = "github:NixOS/nixpkgs";
+        nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     };
 
-    outputs = { nixpkgs, nixpkgs-master, ... }:
+    outputs = { nixpkgs, nixpkgs-unstable, ... }:
     let
         nsenv = import ./nsenv.nix;
         system = nsenv.system;
 
-        nixpkgs-master-patched = (import nixpkgs-master { inherit system; }).applyPatches
+        nixpkgs-unstable-patched = (import nixpkgs-unstable { inherit system; }).applyPatches
         {
-            name = "nixpkgs-master-patched";
-            src = nixpkgs-master;
+            name = "nixpkgs-unstable-patched";
+            src = nixpkgs-unstable;
             patches = [];
         };
-        pkgs-master-patched = import nixpkgs-master-patched
+        pkgs-unstable-patched = import nixpkgs-unstable-patched
         {
             inherit system;
             config.allowUnfreePredicate =
-                pkg: builtins.elem (nixpkgs-master.lib.getName pkg)
+                pkg: builtins.elem (nixpkgs-unstable.lib.getName pkg)
                 [
                     "osu-lazer-bin"
                 ];
@@ -33,7 +31,7 @@
     {
         nixosConfigurations.nixos = nixpkgs.lib.nixosSystem
         {
-            specialArgs = { inherit nsenv pkgs-master-patched; };
+            specialArgs = { inherit nsenv pkgs-unstable-patched; };
 
             modules = [ ./dendrites/configuration.nix ];
         };

@@ -1,4 +1,4 @@
-{ nsenv, pkgs, pkgs-master-patched, ... }:
+{ nsenv, pkgs, pkgs-unstable-patched, ... }:
 {
     users.users.${nsenv.username} =
     {
@@ -24,10 +24,10 @@
             vesktop
             lutris
             dbeaver-bin
-            pkgs-master-patched.mumble
+            pkgs-unstable-patched.mumble
 
             # games
-            pkgs-master-patched.osu-lazer-bin
+            pkgs-unstable-patched.osu-lazer-bin
             prismlauncher
 
             # cli/tui

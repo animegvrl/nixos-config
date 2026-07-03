@@ -1,4 +1,4 @@
-{ pkgs, pkgs-master-patched, ... }:
+{ pkgs, pkgs-unstable-patched, ... }:
 {
     services.displayManager.ly =
     {
@@ -14,7 +14,7 @@
     programs.hyprland =
     {
         enable = true;
-        package = pkgs-master-patched.hyprland;
+        package = pkgs-unstable-patched.hyprland;
     };
     programs.hyprlock.enable = true;
     programs.foot.enable = true;
