@@ -5,9 +5,10 @@
     {
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
         nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+        editerm-main.url = "github:cggjaicf/editerm/nix-flake";
     };
 
-    outputs = { nixpkgs, nixpkgs-unstable, ... }:
+    outputs = { nixpkgs, nixpkgs-unstable, editerm-main, ... }:
     let
         nsenv = import ./nsenv.nix;
         system = nsenv.system;
@@ -27,11 +28,12 @@
                     "osu-lazer-bin"
                 ];
         };
+        editerm = editerm-main.packages.${system}.default;
     in
     {
         nixosConfigurations.nixos = nixpkgs.lib.nixosSystem
         {
-            specialArgs = { inherit nsenv pkgs-unstable-patched; };
+            specialArgs = { inherit nsenv pkgs-unstable-patched editerm; };
 
             modules = [ ./dendrites/configuration.nix ];
         };

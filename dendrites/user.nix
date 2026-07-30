@@ -1,4 +1,4 @@
-{ nsenv, pkgs, pkgs-unstable-patched, ... }:
+{ nsenv, pkgs, pkgs-unstable-patched, editerm, ... }:
 {
     users.users.${nsenv.username} =
     {
@@ -10,6 +10,7 @@
             # browsers
             librewolf
             tor-browser
+            servo
 
             # compositor
             hyprshot
@@ -17,6 +18,7 @@
 
             # programs
             audacity
+            bruno
             coppwr
             zed-editor
             kdePackages.kdenlive
@@ -31,6 +33,8 @@
             prismlauncher
 
             # cli/tui
+            editerm
+            yt-dlp
             rclone
             lazygit
             miniserve

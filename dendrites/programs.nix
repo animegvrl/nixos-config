@@ -22,11 +22,6 @@
 
     # programs
     hardware.opentabletdriver.enable = true;
-    virtualisation.waydroid =
-    {
-        enable = true;
-        package = pkgs.waydroid-nftables;
-    };
     services.lact =
     {
         enable = true;
