@@ -4,6 +4,14 @@
     {
         enable = true;
         x11Support = false;
+        settings =
+        {
+            bigclock = "en";
+            hibernate_key = "F10";
+            restart_key = "F8";
+            shutdown_key = "F9";
+            sleep_key = "F11";
+        };
     };
 
     # system
