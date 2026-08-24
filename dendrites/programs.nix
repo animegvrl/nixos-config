@@ -28,6 +28,14 @@
     programs.foot.enable = true;
     programs.waybar.enable = true;
 
+    # virtualisation
+    programs.virt-manager.enable = true;
+    users.groups.libvirtd.members = [nsenv.username];
+    virtualisation.spiceUSBRedirection.enable = true;
+    virtualisation.libvirtd.enable = true;
+
+    virtualisation.docker.enable = true;
+
     # programs
     hardware.opentabletdriver.enable = true;
     services.lact =
