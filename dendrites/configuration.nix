@@ -97,6 +97,7 @@
     environment.sessionVariables = {
         NIXOS_OZONE_WL = "1";
         EDITOR = "nvim";
+        SWAY_UNSUPPORTED_GPU = "true";
     };
 
     # Some programs need SUID wrappers, can be configured further or are

@@ -20,6 +20,7 @@
             servo
 
             # compositor
+            swaylock
             hyprshot
             fuzzel
 

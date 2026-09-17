@@ -26,7 +26,8 @@
     };
     programs.hyprlock.enable = true;
     programs.foot.enable = true;
-    programs.waybar.enable = true;
+    programs.sway.enable = true;
+    # programs.waybar.enable = true;
 
     # virtualisation
     programs.virt-manager.enable = true;
@@ -50,7 +51,7 @@
             cudaSupport = true;
         });
 
-        # plugins = [ pkgs.obs-studio-plugins.wlrobs ];
+        plugins = [ pkgs.obs-studio-plugins.wlrobs ];
     };
     programs.steam =
     {
