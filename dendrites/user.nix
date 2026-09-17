@@ -42,7 +42,7 @@
 
             # cli/tui
             editerm
-            yt-dlp
+            pkgs-unstable-patched.yt-dlp
             rclone
             lazygit
             miniserve
