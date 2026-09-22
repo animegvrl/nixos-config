@@ -19,15 +19,8 @@
     programs.gnupg.agent.enable = true;
 
     # compositor
-    programs.hyprland =
-    {
-        enable = true;
-        package = pkgs-unstable-patched.hyprland;
-    };
-    programs.hyprlock.enable = true;
     programs.foot.enable = true;
     programs.sway.enable = true;
-    # programs.waybar.enable = true;
 
     # virtualisation
     programs.virt-manager.enable = true;
