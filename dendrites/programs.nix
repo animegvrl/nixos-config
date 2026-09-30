@@ -21,6 +21,23 @@
     # compositor
     programs.foot.enable = true;
     programs.sway.enable = true;
+    xdg.portal = {
+        enable = true;
+        extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+        wlr = {
+            enable = true;
+            settings = {
+                screencast = {
+                    output_name = "DP-1";
+                    max_fps = 240;
+                    # exec_before = "disable_notifications.sh";
+                    # exec_after = "enable_notifications.sh";
+                    chooser_type = "simple";
+                    chooser_cmd = "${pkgs.slurp}/bin/slurp -f 'Monitor: %o' -or";
+                };
+            };
+        };
+    };
 
     # virtualisation
     programs.virt-manager.enable = true;
