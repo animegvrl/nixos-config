@@ -81,6 +81,11 @@
     };
 
     # cli/tui
+    programs.git =
+    {
+        enable = true;
+        lfs.enable = true;
+    };
     programs.neovim.enable = true;
     programs.yazi.enable = true;
     programs.gamemode =
