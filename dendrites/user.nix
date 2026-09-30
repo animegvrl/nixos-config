@@ -35,6 +35,7 @@
             lutris
             dbeaver-bin
             pkgs-unstable-patched.mumble
+            syncplay
 
             # games
             pkgs-unstable-patched.osu-lazer-bin
