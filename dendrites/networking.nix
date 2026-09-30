@@ -8,10 +8,10 @@
     # VPN
     networking.wg-quick.interfaces =
     {
-        mega-4-de =
+        proton-at-161 =
         {
             autostart = true;
-            configFile = "/home/${nsenv.username}/wg-conf/mega-4-de.conf";
+            configFile = "/home/${nsenv.username}/wg-conf/proton-at-161.conf";
         };
     };
 
